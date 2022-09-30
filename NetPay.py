@@ -25,8 +25,11 @@ table1 = [["Name", "ID Number", "Department","Job Title","Monthly Salary"],
 ]
 
 table2 = [["Description", "Date", "Charge Amount", "Job Title", "ID Number"],
-            ["food court", "8/14/2022", "22.50", "39119"]
-
+            ["food court", "8/14/2022", "22.50", "39119"],
+            ["gift contirbution", "8/12/2022", "25.00", "58475"],
+            ["food court", "8/17/2022", "15.25", "21547"],
+            ["vending machine", "8/22/2022", "3.00", "58475"],
+            ["vending machine", "8/5/2022", "2.75", "58475"] 
 
 ]
 
@@ -39,4 +42,7 @@ print("Name: ", employee1.get_name())
 print("ID Number: ", employee1.get_id())
 print("Department: ", employee1.get_department())
 print("Gross Pay: ", "${:,.2f}".format(float(employee1.get_monthly_salary())))
-print("Net Pay: ", "${:,.2f}".format((float(employee1.get_monthly_salary()))) - (float(payded2.get_charge_amt())) - (float(payded4.get_charge_amt()))- (float(payded5.get_charge_amt))))
+y=(float(payded2.get_charge_amt()))
+z=(float(payded4.get_charge_amt()))
+b=(float(payded5.get_charge_amt()))
+print("Net Pay: ", "${:,.2f}".format((float(employee1.get_monthly_salary())) - (y+z+b)))
